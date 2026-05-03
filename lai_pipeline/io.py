@@ -171,12 +171,7 @@ def combined_snp_manifest_for_chrom(bundle_dir: Path, chrom: str, target_contig:
         p = bundle_dir / e["snp_manifest_file"]
         if not p.exists():
             raise FileNotFoundError(f"Missing SNP manifest file: {p}")
-        df = pd.read_csv(p, sep="\t", dtype_backend="numpy_nullable")
-        df["chrom"] = df["chrom"].astype(str)
-        df["pos"] = df["pos"].astype(int)
-        df["rsid"] = df["rsid"].astype(str)
-        df["ref"] = df["ref"].astype(str)
-        df["alt"] = df["alt"].astype(str)
+        df = pd.read_csv(p, sep="\t", dtype={"chrom": str, "pos": int, "rsid": str, "ref": str, "alt": str})
         dfs.append(df)
 
     out = pd.concat(dfs, ignore_index=True)

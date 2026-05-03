@@ -1,0 +1,2 @@
+n_required	n_matched	n_missing	missing_fraction	match_fraction	missing_rsids_first10	n_refalt_mismatch	refalt_mismatch_first5	n_samples	tensor_shape	chrom	subset_idx	model_file
+585380	472913	112467	0.19212648194335302	0.807873518056647	['.', '.', '.', '.', '.', '.', '.', '.', '.', '.']	0	[]	654	(654, 2, 585380)	20		models/pclainet_chm20.pt2
