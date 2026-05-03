@@ -1,2 +1,0 @@
-n_required	n_matched	n_missing	missing_fraction	match_fraction	missing_rsids_first10	n_refalt_mismatch	refalt_mismatch_first5	n_samples	tensor_shape	chrom	subset_idx	model_file
-366615	288058	78557	0.21427655715123495	0.785723442848765	['.', '.', '.', '.', '.', '.', '.', '.', '.', '.']	0	[]	654	(654, 2, 366615)	21		models/pclainet_chm21.pt2
