@@ -92,6 +92,10 @@ def write_final_vcf_in_manifest_order(
     LOG.info("  filled_from_beagle     = %d", beagle_used)
     LOG.info("  filled_from_target     = %d", target_used)
     LOG.info("  missing_unfilled       = %d", missing_count)
+    LOG.info("  ---")
+    LOG.info("  filled_from_beagle: SNPs written from Beagle output (re-phased input SNPs + imputed SNPs; not distinguished).")
+    LOG.info("  filled_from_target: SNPs from the input VCF absent in Beagle output, written as-is without re-phasing.")
+    LOG.info("  missing_unfilled:   SNPs required by the model manifest not found in either source; written as ./. for all samples.")
 
     # Compress + index
     out_vcf_gz.parent.mkdir(parents=True, exist_ok=True)
